@@ -1,0 +1,160 @@
+nav.scroll {
+    position: fixed;
+    top: -100px; // 변경
+    left: 0;
+    right:0;
+    min-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 160px;
+    transition: top 0.4s ease; // 변경
+    z-index: 100;
+  
+    &.sticky {
+      top: 0; // 변경
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      padding: 18px 160px;
+    }
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-left: 40px;
+    }
+
+    &:last-child li:last-child {
+      margin-right: 160px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 20px;
+      position: relative;
+
+      &:hover {
+        color: #aaaaaa;
+      }
+
+      img {
+        width: 24px;
+        height: auto;
+      }
+    }
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  #main-nav.sticky {
+    opacity: 1; /* 스크롤을 내리면 보이도록 설정 */
+    visibility: visible; /* 스크롤을 내리면 보이도록 설정 */
+  }
+
+    li {
+      position: relative;
+      align-self: flex-start; 
+    }
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #262626;
+    padding: 10px;
+    min-width: 120px;
+    z-index: 100;
+    // display: block;
+
+
+    li:hover & {
+    display: block;
+    }
+    li a{
+      font-size:14px;
+      text-transform: initial;
+      white-space: nowrap;
+    }
+
+  }
+  li:nth-of-type(1) > .sub-menu {
+    width:120px;
+    
+    
+  }
+  li:nth-of-type(2) > .sub-menu {
+    
+    
+    
+  }
+  li:nth-of-type(3) > .sub-menu {
+    
+    
+  }
+  li:nth-of-type(4) > .sub-menu {
+    
+    
+    
+  }
+//scss 바디 부분 폰트 선언 방법
+
+
+
+
+
+
+
+    
+  @media only screen and (max-width: 768px) {
+
+    ul {
+      display: none;
+      flex-direction: column;
+      margin-top: 20px;
+
+      li {
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        padding: 5px;
+      }
+    }
+
+    .menu-icon {
+      display: block;
+    }
+  }
